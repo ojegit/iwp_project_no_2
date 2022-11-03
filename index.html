@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+
+        <!-- <meta charset="UTF-8"> -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <!-- BOOTSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- LEAFLET -->
+        <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+        <script src="node_modules/leaflet/dist/leaflet.js"></script>
+
+        <!-- MAIN STYLE SHEET-->
+        <link rel="stylesheet" href="src/style.css">
+
+        <!-- MAIN JS-->
+        <script type="module" src="/src/main.js"></script> <!-- The Main JS file. This should containt references to the others -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script> -->
+    </head>
+
+    <body>
+        <div id="container"> <!-- THIS WILL BE A GRID -->
+            <div id="main-container">
+                <div div id="main"> <!-- MAP HERE -->
+                    <div id="map"></div> 
+                </div> 
+            </div>
+            <div id="data-container"> <!-- DATA HERE -->
+                <div id="data"></div> 
+            </div>
+            <div id="overall-container"> <!-- OVERALL CHART HERE -->
+                <div id="overall"> 
+                    <div id="overall-chart"></div>
+                    <!-- 
+                    <div><input type="button" id="overall-chart-export" value="Export"></input></div>
+                    -->
+                    <div><button class="btn btn-outline-success" id="overall-chart-export" type="button">Export</button></div>
+                    <div id="overall-buttons"></div>
+                </div>
+            </div>
+            <div id="overall-chart-buttons"> <!-- OVERALL CHART AGGREGATION BUTTONS HERE -->
+                
+                    <!-- 
+                    <form id="agg-type">
+                        <input type="radio" id="select-mean" name="agg-radio-button" value="mean" checked="checked">
+                        <label for="select-mean">Mean</label>
+                        <input type="radio" id="select-median" name="agg-radio-button" value="median">
+                        <label for="select-median">Median</label>
+                        <input type="radio" id="select-std" name="agg-radio-button" value="std" >
+                        <label for="select-std">Stdev</label>
+                    </form>
+                    -->
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="agg-radio-button" id="select-mean" value="mean" checked="checked">
+                        <label class="form-check-label" for="inlineRadio1">Mean</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="agg-radio-button" id="select-median" value="median">
+                        <label class="form-check-label" for="inlineRadio2">Median</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="agg-radio-button" id="select-std" value="std">
+                        <label class="form-check-label" for="inlineRadio3">Stdev</label>
+                    </div>
+                
+            </div>
+            <div id="search-container">
+                <div id="search"> <!-- SEARCH BAR HERE -->
+                    <!--
+                    <form onsubmit="return false">
+                        <input type="text" id="search-bar" name="munip-search" value="Munipality here">
+                        <input type="button" id="search-button" value="Search" name="search-label">
+                        <input type="button" id="clear-search-button" value="Clear" name="search-label">
+                    </form>
+                    -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" id="search-bar" type="search" placeholder="Munipality here" aria-label="Search">
+                        <button class="btn btn-outline-success" id="search-button" type="button">Search</button>
+                        <button class="btn btn-outline-success" id="clear-search-button" type="button">Clear</button>
+                    </form>
+                </div>
+            </div>           
+        </div> 
+
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+    </body>
+
+
+</html>

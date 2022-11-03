@@ -1,0 +1,203 @@
+/* Style the buttons that are used to open and close the accordion panel */
+#data.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  #data.active, #data.accordion:hover {
+    background-color: #ccc;
+  }
+  
+  #data .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+#container {
+    width: 100%; 
+    height: 98vh;
+    display: grid;
+    row-gap: 1vh;
+    column-gap: 1vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.2fr 0.5fr 0.2fr 0.2fr;
+    grid-template-areas:
+    "a1 b"
+    "a2 b"
+    "a4 b"
+    "a3 b";
+    /*margin: 2rem 0;*/
+    /*display: inline;*/
+    /*overflow: hidden;*/
+    margin: 0;
+}
+
+#main-container {
+    grid-area: b;
+    background-color: white;
+}
+
+#main {
+    height: 100%;
+    width: 100%;  
+}
+
+#main-container #map {
+    height: 100%;
+    width: 100%;
+    /*margin: 2vh 2vh 2vh 2vh;*/
+}
+
+
+#data-container {
+    /*height: 70vh;*/
+    grid-area: a1;
+    background-color: white;
+    align-self: start;
+}
+
+#overall-container {
+    /*height: 20vh;*/
+    grid-area: a2;
+    background-color: white;
+    align-self: start;
+}
+
+#search-container {
+    /*height: 5vh;*/
+    grid-area: a3;
+    background-color: white;
+    align-self: start;
+}
+
+#overall-chart-buttons {
+    grid-area: a4;
+    background-color: white;
+    align-self: start;
+}
+
+#info-container {
+    width: 0px;
+    height: 0px;
+    /*height: 20vh;*/
+    /*align-self: middle;*/
+}
+
+.info { /*adjusting the map legend*/
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 { /*adjusting the map legend*/
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {  /*adjusting the map legend*/
+    line-height: 18px;
+    color: #555;
+}
+.legend i {  /*adjusting the map legend*/
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+
+    #container {
+        width: 100%; 
+        height: 100%;
+        /*height: 98vh;*/
+        display: grid;
+        /*row-gap: 1vh;*/
+        /*column-gap: 1vh;*/
+        grid-template-columns: 1.2fr 1fr;
+        /*grid-template-columns: 2fr 1fr;*/
+        grid-template-rows: 1fr 3fr 1fr 0.2fr;
+        grid-template-areas:
+        "a1 a1"
+        "b b"
+        "a2 a2"
+        "a3 a4";
+        /*margin: 2rem 0;*/
+        /*display: inline;*/
+        /*overflow: hidden;*/
+        margin: 0;
+    }
+    
+    #main-container {
+        grid-area: b;
+        background-color: white;
+        align-self: middle;
+    }
+
+    #data-container {
+        /*height: 70vh;*/
+        grid-area: a1;
+        background-color: white;
+        align-self: start;
+    }
+    
+    #overall-container {
+        /*height: 20vh;*/
+        grid-area: a2;
+        background-color:  white;
+        /*align-self: middle;*/
+        align-self: start;
+    }
+
+    #search-container {
+        /*height: 5vh;*/
+        grid-area: a3;
+        background-color: white;
+        align-self: end;
+    }
+
+    #overall-chart-buttons {
+        grid-area: a4;
+        background-color: white;
+        align-self: end;
+    }
+    
+    .info { /*adjusting the map legend*/
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+    .info h4 { /*adjusting the map legend*/
+        margin: 0 0 5px;
+        color: #777;
+    }
+
+    .legend {  /*adjusting the map legend*/
+        line-height: 18px;
+        color: #555;
+    }
+    .legend i {  /*adjusting the map legend*/
+        font-size: small;
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 8px;
+        opacity: 0.7;
+    }
+
+}
