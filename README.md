@@ -12,10 +12,13 @@
 # -statistical functions for aggregating across all municipalities
 # -search for municipalities
 # -show complete data for municipality
+# -responsiveness
 #
-# Missing features:
+# TBA:
 # -query data i.e "show all that have less than this amount of education" etc. -> pain them in a color and/or list them
 # -compare data
+# -instead of drag n drop mobile GUI should use some other method (e.g click) to import the data
+# -change accordion to more screen friendly for mobile
 #
 # Known bugs:
 # -when attempting to export map data, if multiple municipalities have been clicked and map produced, multiple requests are made (when 
