@@ -229,6 +229,7 @@ async function initializeCode() {
                 for(var id of subDivIds[i]) {
                     document.getElementById(id).addEventListener('dragstart', (e) => {
                         e.dataTransfer.setData('text/plain', JSON.stringify([e.target.classList.item(1), e.target.id]));
+                        //e.dataTransfer.setData('text', JSON.stringify([e.target.classList.item(1), e.target.id]));
                         setTimeout(() => {
                             e.target.classList.add('hide');
                         }, 0);
@@ -554,6 +555,7 @@ async function initializeCode() {
             }
     
             async function drop(e) {
+                e.preventDefault();
                 e.target.classList.remove('drag-over');
         
                 // need to specify DRAG event somewhere
