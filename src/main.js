@@ -555,7 +555,7 @@ async function initializeCode() {
             }
     
             async function drop(e) {
-                e.preventDefault();
+                e.preventDefault(); //needed in order for drag n drop to work with Firefox!
                 e.target.classList.remove('drag-over');
         
                 // need to specify DRAG event somewhere
